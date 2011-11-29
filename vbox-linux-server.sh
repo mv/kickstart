@@ -44,25 +44,25 @@ VBoxManage modifyvm          \
     --monitorcount       1   \
     --accelerate3d       off \
     --accelerate2dvideo  off \
-    --firmware bios              \
-    --chipset  piix3             \
-    --boot1    dvd               \
-    --boot2    disk              \
-    --boot3    none              \
-    --boot4    none              \
-    --nic2             hostonly  \
-    --hostonlyadapter2 vboxnet0  \
-    --nictype2         82540EM   \
-    --cableconnected2  on        \
-    --mouse    ps2        \
-    --keyboard ps2        \
-    --uart1    off        \
-    --uart2    off        \
-    --audio    none       \
-    --usb      off        \
-    --usbehci  off        \
-    --vrde     off        \
-    --teleporter off
+    --firmware bios          \
+    --chipset  piix3         \
+    --boot1    dvd           \
+    --boot2    disk          \
+    --boot3    none          \
+    --boot4    none          \
+    --mouse    ps2           \
+    --keyboard ps2           \
+    --uart1    off           \
+    --uart2    off           \
+    --audio    none          \
+    --usb      off           \
+    --usbehci  off           \
+    --vrde     off           \
+    --teleporter off         \
+    # --nic2             hostonly  \
+    # --hostonlyadapter2 vboxnet0  \
+    # --nictype2         82540EM   \
+    # --cableconnected2  on        \
 
 
 #
