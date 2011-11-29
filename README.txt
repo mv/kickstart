@@ -1,14 +1,10 @@
-README.txt
 
 My kickstart files to build a minimal installation of CentOS/ScientificLinux
-using VirtualBox.
-
-A minimal installation will be used and distributed as a vagrant box.
-
+using VirtualBox. This minimal installation will be used to build a vagrant
+box.
 
 Files
 -----
-
 c.xml                       - Source: grep -v 'xml:lang' comps-centos57-x86_64.xml > c.xml
 comps-centos56-x86_64.xml   - Centos56 iso: /repodata/comps.xml
 comps-centos57-x86_64.xml   - Centos57 iso: /repodata/comps.xml
