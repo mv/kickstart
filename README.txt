@@ -11,13 +11,17 @@ comps-centos57-x86_64.xml   - Centos57 iso: /repodata/comps.xml
 comps-sl60-x86_64.xml       - Scientific 6.0 iso: /repodata/comps.xml
 comps-sl61-x86_64.xml       - Scientific 6.1 iso: /repodata/comps.xml
 installed.bare.vboxadd.txt
+installed.bare1.txt         - result list of installed packages.
+installed.bare2.txt
+installed.bare3.txt
+installed.bare4.txt
 ks-bare.cfg                 - first version: no vagrant user
 ks-bare-vagrant.cfg         - additions: 'vagrant' user
 ks-centos56-bare-vagrant.cfg
 ks-centos57-bare-vagrant.cfg
 ks-sl61-bare-vagrant.cfg
 ks56.cfg                    - initial for centos56
-ks57.cfg                    - current config:
+ks57.cfg                    - current config: 173 packages
 ks57-0.cfg                  - initial for centos57: 193 packages
 ks57-1.cfg                  - centos57: 156 packages
 ks57-2.cfg                  - centos57: 143 packages
