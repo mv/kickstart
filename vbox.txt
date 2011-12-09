@@ -1,0 +1,116 @@
+
+VBoxManage createvm         --name <name>
+                            [--ostype <ostype>]
+                            [--register]
+                            [--basefolder <path>]
+                            [--uuid <uuid>]
+
+VBoxManage modifyvm         <uuid|name>
+                            [--name <name>]
+                            [--ostype <ostype>]
+                            [--memory <memorysize in MB>]
+                            [--pagefusion on|off]
+                            [--vram <vramsize in MB>]
+                            [--acpi on|off]
+                            [--pciattach 03:04.0]
+                            [--pciattach 03:04.0@02:01.0]
+                            [--pcidetach 03:04.0]
+                            [--ioapic on|off]
+                            [--pae on|off]
+                            [--hpet on|off]
+                            [--hwvirtex on|off]
+                            [--hwvirtexexcl on|off]
+                            [--nestedpaging on|off]
+                            [--largepages on|off]
+                            [--vtxvpid on|off]
+                            [--synthcpu on|off]
+                            [--cpuidset <leaf> <eax> <ebx> <ecx> <edx>]
+                            [--cpuidremove <leaf>]
+                            [--cpuidremoveall]
+                            [--hardwareuuid <uuid>]
+                            [--cpus <number>]
+                            [--cpuhotplug on|off]
+                            [--plugcpu <id>]
+                            [--unplugcpu <id>]
+                            [--cpuexecutioncap <1-100>]
+                            [--rtcuseutc on|off]
+                            [--monitorcount <number>]
+                            [--accelerate3d on|off]
+                            [--accelerate2dvideo on|off]
+                            [--firmware bios|efi|efi32|efi64]
+                            [--chipset ich9|piix3]
+                            [--bioslogofadein on|off]
+                            [--bioslogofadeout on|off]
+                            [--bioslogodisplaytime <msec>]
+                            [--bioslogoimagepath <imagepath>]
+                            [--biosbootmenu disabled|menuonly|messageandmenu]
+                            [--biossystemtimeoffset <msec>]
+                            [--biospxedebug on|off]
+                            [--boot<1-4> none|floppy|dvd|disk|net>]
+                            [--nic<1-N> none|null|nat|bridged|intnet|hostonly|
+                                        generic]
+                            [--nictype<1-N> Am79C970A|Am79C973|
+                                            82540EM|82543GC|82545EM|
+                                            virtio]
+                            [--cableconnected<1-N> on|off]
+                            [--nictrace<1-N> on|off]
+                            [--nictracefile<1-N> <filename>]
+                            [--nicproperty<1-N> name=[value]]
+                            [--nicspeed<1-N> <kbps>]
+                            [--nicbootprio<1-N> <priority>]
+                            [--nicpromisc<1-N> deny|allow-vms|allow-all]
+                            [--nicbandwidthgroup<1-N> none|<name>]
+                            [--bridgeadapter<1-N> none|<devicename>]
+                            [--hostonlyadapter<1-N> none|<devicename>]
+                            [--intnet<1-N> <network name>]
+                            [--natnet<1-N> <network>|default]
+                            [--nicgenericdrv<1-N> <driver>
+                            [--natsettings<1-N> [<mtu>],[<socksnd>],
+                                                [<sockrcv>],[<tcpsnd>],
+                                                [<tcprcv>]]
+                            [--natpf<1-N> [<rulename>],tcp|udp,[<hostip>],
+                                          <hostport>,[<guestip>],<guestport>]
+                            [--natpf<1-N> delete <rulename>]
+                            [--nattftpprefix<1-N> <prefix>]
+                            [--nattftpfile<1-N> <file>]
+                            [--nattftpserver<1-N> <ip>]
+                            [--natbindip<1-N> <ip>
+                            [--natdnspassdomain<1-N> on|off]
+                            [--natdnsproxy<1-N> on|off]
+                            [--natdnshostresolver<1-N> on|off]
+                            [--nataliasmode<1-N> default|[log],[proxyonly],
+                                                         [sameports]]
+                            [--macaddress<1-N> auto|<mac>]
+                            [--mouse ps2|usb|usbtablet
+                            [--keyboard ps2|usb
+                            [--uart<1-N> off|<I/O base> <IRQ>]
+                            [--uartmode<1-N> disconnected|
+                                             server <pipe>|
+                                             client <pipe>|
+                                             file <file>|
+                                             <devicename>]
+                            [--guestmemoryballoon <balloonsize in MB>]
+                            [--gueststatisticsinterval <seconds>]
+                            [--audio none|null|coreaudio]
+                            [--audiocontroller ac97|hda|sb16]
+                            [--clipboard disabled|hosttoguest|guesttohost|
+                                         bidirectional]
+                            [--vrde on|off]
+                            [--vrdeextpack default|<name>
+                            [--vrdeproperty <name=[value]>]
+                            [--vrdeport <hostport>]
+                            [--vrdeaddress <hostip>]
+                            [--vrdeauthtype null|external|guest]
+                            [--vrdeauthlibrary default|<name>
+                            [--vrdemulticon on|off]
+                            [--vrdereusecon on|off]
+                            [--vrdevideochannel on|off]
+                            [--vrdevideochannelquality <percent>]
+                            [--usb on|off]
+                            [--usbehci on|off]
+                            [--snapshotfolder default|<path>]
+                            [--teleporter on|off]
+                            [--teleporterport <port>]
+                            [--teleporteraddress <address|empty>
+                            [--teleporterpassword <password>]
+
