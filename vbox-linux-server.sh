@@ -14,7 +14,7 @@
     exit 2
 }
 
-dvd="/pub/_iso/linux/CentOS-5.7-x86_64-bin-DVD/CentOS-5.7-x86_64-bin-DVD-1of2.iso"
+dvd="/pub/_iso/linux/CentOS-5.7-x86_64-bin-DVD/CentOS-5.7-x86_64-bin-1of8.iso"
 machine_dir="/VMachine"
 machine_name="$1"
 

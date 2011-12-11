@@ -21,7 +21,7 @@ ks-centos56-bare-vagrant.cfg
 ks-centos57-bare-vagrant.cfg
 ks-sl61-bare-vagrant.cfg
 ks56.cfg                    - initial for centos56
-ks57.cfg                    - current config: 173 packages
+ks57.cfg                    - current config: 175 packages
 ks57-0.cfg                  - initial for centos57: 193 packages
 ks57-1.cfg                  - centos57: 156 packages
 ks57-2.cfg                  - centos57: 143 packages
