@@ -1,116 +1,191 @@
 
-VBoxManage createvm         --name <name>
-                            [--ostype <ostype>]
-                            [--register]
-                            [--basefolder <path>]
-                            [--uuid <uuid>]
 
-VBoxManage modifyvm         <uuid|name>
-                            [--name <name>]
-                            [--ostype <ostype>]
-                            [--memory <memorysize in MB>]
-                            [--pagefusion on|off]
-                            [--vram <vramsize in MB>]
-                            [--acpi on|off]
-                            [--pciattach 03:04.0]
-                            [--pciattach 03:04.0@02:01.0]
-                            [--pcidetach 03:04.0]
-                            [--ioapic on|off]
-                            [--pae on|off]
-                            [--hpet on|off]
-                            [--hwvirtex on|off]
-                            [--hwvirtexexcl on|off]
-                            [--nestedpaging on|off]
-                            [--largepages on|off]
-                            [--vtxvpid on|off]
-                            [--synthcpu on|off]
-                            [--cpuidset <leaf> <eax> <ebx> <ecx> <edx>]
-                            [--cpuidremove <leaf>]
-                            [--cpuidremoveall]
-                            [--hardwareuuid <uuid>]
-                            [--cpus <number>]
-                            [--cpuhotplug on|off]
-                            [--plugcpu <id>]
-                            [--unplugcpu <id>]
-                            [--cpuexecutioncap <1-100>]
-                            [--rtcuseutc on|off]
-                            [--monitorcount <number>]
-                            [--accelerate3d on|off]
-                            [--accelerate2dvideo on|off]
-                            [--firmware bios|efi|efi32|efi64]
-                            [--chipset ich9|piix3]
-                            [--bioslogofadein on|off]
-                            [--bioslogofadeout on|off]
-                            [--bioslogodisplaytime <msec>]
-                            [--bioslogoimagepath <imagepath>]
-                            [--biosbootmenu disabled|menuonly|messageandmenu]
-                            [--biossystemtimeoffset <msec>]
-                            [--biospxedebug on|off]
-                            [--boot<1-4> none|floppy|dvd|disk|net>]
-                            [--nic<1-N> none|null|nat|bridged|intnet|hostonly|
-                                        generic]
-                            [--nictype<1-N> Am79C970A|Am79C973|
-                                            82540EM|82543GC|82545EM|
-                                            virtio]
-                            [--cableconnected<1-N> on|off]
-                            [--nictrace<1-N> on|off]
-                            [--nictracefile<1-N> <filename>]
-                            [--nicproperty<1-N> name=[value]]
-                            [--nicspeed<1-N> <kbps>]
-                            [--nicbootprio<1-N> <priority>]
-                            [--nicpromisc<1-N> deny|allow-vms|allow-all]
-                            [--nicbandwidthgroup<1-N> none|<name>]
-                            [--bridgeadapter<1-N> none|<devicename>]
-                            [--hostonlyadapter<1-N> none|<devicename>]
-                            [--intnet<1-N> <network name>]
-                            [--natnet<1-N> <network>|default]
-                            [--nicgenericdrv<1-N> <driver>
-                            [--natsettings<1-N> [<mtu>],[<socksnd>],
-                                                [<sockrcv>],[<tcpsnd>],
-                                                [<tcprcv>]]
-                            [--natpf<1-N> [<rulename>],tcp|udp,[<hostip>],
-                                          <hostport>,[<guestip>],<guestport>]
-                            [--natpf<1-N> delete <rulename>]
-                            [--nattftpprefix<1-N> <prefix>]
-                            [--nattftpfile<1-N> <file>]
-                            [--nattftpserver<1-N> <ip>]
-                            [--natbindip<1-N> <ip>
-                            [--natdnspassdomain<1-N> on|off]
-                            [--natdnsproxy<1-N> on|off]
-                            [--natdnshostresolver<1-N> on|off]
-                            [--nataliasmode<1-N> default|[log],[proxyonly],
-                                                         [sameports]]
-                            [--macaddress<1-N> auto|<mac>]
-                            [--mouse ps2|usb|usbtablet
-                            [--keyboard ps2|usb
-                            [--uart<1-N> off|<I/O base> <IRQ>]
-                            [--uartmode<1-N> disconnected|
-                                             server <pipe>|
-                                             client <pipe>|
-                                             file <file>|
-                                             <devicename>]
-                            [--guestmemoryballoon <balloonsize in MB>]
-                            [--gueststatisticsinterval <seconds>]
-                            [--audio none|null|coreaudio]
-                            [--audiocontroller ac97|hda|sb16]
-                            [--clipboard disabled|hosttoguest|guesttohost|
-                                         bidirectional]
-                            [--vrde on|off]
-                            [--vrdeextpack default|<name>
-                            [--vrdeproperty <name=[value]>]
-                            [--vrdeport <hostport>]
-                            [--vrdeaddress <hostip>]
-                            [--vrdeauthtype null|external|guest]
-                            [--vrdeauthlibrary default|<name>
-                            [--vrdemulticon on|off]
-                            [--vrdereusecon on|off]
-                            [--vrdevideochannel on|off]
-                            [--vrdevideochannelquality <percent>]
-                            [--usb on|off]
-                            [--usbehci on|off]
-                            [--snapshotfolder default|<path>]
-                            [--teleporter on|off]
-                            [--teleporterport <port>]
-                            [--teleporteraddress <address|empty>
-                            [--teleporterpassword <password>]
+VirtualBox
+----------
+    Download:
+        http://download.virtualbox.org/virtualbox/4.1.6/VirtualBox-4.1.6-74713-OSX.dmg
+        http://download.virtualbox.org/virtualbox/4.1.6/Oracle_VM_VirtualBox_Extension_Pack-4.1.6-74713.vbox-extpack
+
+    Command Line:
+        /usr/bin/VirtualBox
+        /usr/bin/VBoxManage
+        /usr/bin/VBoxBalloonCtrl
+        /usr/bin/VBoxHeadless
+        /usr/bin/VBoxVRDP
+        /usr/bin/vboxwebsrv
+
+        alias vbm='VBoxManage'
+        alias vbox='VirtualBox &'
+
+    Git:
+        https://github.com/mv/kickstart
+            virtualbox.bashrc.sh
+            vboxmanage.bash_completion.sh
+
+    RPM:
+        https://github.com/mv/rpm
+
+
+
+VirtualBox Network
+------------------
+
+    NAT:
+        eth0: 10.0.2.2  -
+            10.0.2.5
+                   6
+                   7
+                   8
+
+
+        eth1: 10.0.3.2
+        eth2: 10.0.4.2
+        eth3: 10.0.5.2
+
+    HostOnly
+        vboxnet0
+            Adapter: 192.168.10.1/255.255.255.0
+            DHCP
+                Server Address: 192.168.10.100
+                Server Mask: 255.255.255.0
+                Lower Bound: 192.168.10.101
+                Upper Bound: 192.168.10.254
+
+
+
+Bash Completion
+---------------
+
+    Install
+        brew install bash-completion
+
+    ~/.bashrc
+        [ -f /usr/local/etc/bash_completion ] &&  source /usr/local/etc/bash_completion
+
+
+
+CentOS
+------
+    http://isoredirect.centos.org/centos/5.7/isos/x86_64/
+        CentOS-5.7-x86_64-bin-1of8.iso
+        CentOS-5.7-x86_64-bin-5of8.iso
+
+Kickstart
+---------
+    Enable apache:
+
+        cp ks.vhost.conf /etc/apache2/users/
+        sudo httpd -k start
+
+    Test:
+        curl http://127.0.0.1/ks57.cfg
+
+
+    Grub:
+        linux text ks=http://10.0.0.2/ks57.cfg
+
+        linux text ks=http://10.0.0.2/ks57.cfg
+
+
+
+
+Vagrant
+-------
+    http://vagrantup.com/
+
+    Install
+        gem install vagrant
+
+    Create new box
+        vagrant package --base lnx --output ref.box
+
+
+
+Box::New
+--------
+    Guest Additions:
+        RPM's
+            open CentOS-5.7-x86_64-bin-DVD-1of2.iso
+            cp /Volumes/CentOS_5.7_Final/CentOS/gcc-4.1.2-51.el5.x86_64.rpm              .
+            cp /Volumes/CentOS_5.7_Final/CentOS/cpp-4.1.2-51.el5.x86_64.rpm              .
+            cp /Volumes/CentOS_5.7_Final/CentOS/glibc-devel-2.5-65.x86_64.rpm            .
+            cp /Volumes/CentOS_5.7_Final/CentOS/glibc-headers-2.5-65.x86_64.rpm          .
+            cp /Volumes/CentOS_5.7_Final/CentOS/kernel-devel-2.6.18-274.el5.x86_64.rpm   .
+            cp /Volumes/CentOS_5.7_Final/CentOS/kernel-headers-2.6.18-274.el5.x86_64.rpm .
+
+        Local iso for Guest Additions
+            open /Applications/VirtualBox.app/Contents/MacOS/VBoxGuestAdditions.iso
+            cp /Volumes/VBOXADDITIONS_4./VBoxLinuxAdditions.run  .
+
+        Copy to new box:
+            scp user@10.0.0.2:/tmp/vboxadd/* .
+
+    Scripts
+        vbox-linux-server.sh   machine_name
+        vbox-boot-hd.sh        machine_name
+
+
+RPM Commands
+------------
+
+    rpm -qa
+    rpm -qa | sort | cat -n | more
+    rpm -qa | wc -l
+    rpm -qa --info gcc
+
+    rpm -qf /bin/ls
+
+    rpm -ql  htop                           # installed package
+    rpm -qlp htop-0.8.3-1.el5.x86_64.rpm    # rpm file
+
+    rpm -ivh pkg.rpm
+    rpm -Uvh pkg.rpm
+    rpm -ev  pkg.rpm
+
+
+    yum list | grep installed
+    yum remove gcc
+
+
+
+Using
+-----
+
+    Adding box to vagrant list
+        vagrant box add centos57  ./centos-5.7-x86_64-minimal.box
+
+    Create new centos57 instance
+        cd dir/project
+        vagrant init centos57
+        vagrant up
+
+
+
+
+Lab???
+------
+
+Vagrant::Config.run do |config|
+  config.vm.define :web do |web_config|
+    web_config.vm.box = "web"
+    web_config.vm.network("192.168.10.11")
+  end
+
+  config.vm.define :db do |db_config|
+    db_config.vm.box = "db"
+    web_config.vm.network("192.168.10.12")
+  end
+end
+
+
+
+
+config/deploy/vagrant.rb
+
+        server "192.168.10.11", :web
+        server "192.168.10.12", :app, :db, :primary => true
+
+
+
+cap vagrant deploy
 
