@@ -21,13 +21,13 @@ ks-centos56-bare-vagrant.cfg
 ks-centos57-bare-vagrant.cfg
 ks-sl61-bare-vagrant.cfg
 ks56.cfg                    - initial for centos56
-ks57.cfg                    - centos57: 175 packages
-ks57-0.cfg                  - initial for centos57: 193 packages
+ks57.cfg                    - link -> ks-centos57-bare-vagrant
+ks57-0.cfg                  - centos57: 193 packages (initial)
 ks57-1.cfg                  - centos57: 156 packages
 ks57-2.cfg                  - centos57: 143 packages
 ks57-3.cfg                  - centos57: 131 packages
 ks57-4.cfg                  - centos57: 127 packages
-ks57-5.cfg                  - centos57: 142 packages (current)
+ks57-5.cfg                  - centos57: 140 packages (current)
 ks61.cfg                    - testing....
 read-comps-xml.rb           - get packages from comps.xml to be used in a new kickstart.
 vagrant-post-additions.cfg  - snippet: post tasks to create 'vagrant' user
