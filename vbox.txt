@@ -112,6 +112,11 @@ Box::New
             cp /Volumes/CentOS_5.7_Final/CentOS/glibc-headers-2.5-65.x86_64.rpm          .
             cp /Volumes/CentOS_5.7_Final/CentOS/kernel-devel-2.6.18-274.el5.x86_64.rpm   .
             cp /Volumes/CentOS_5.7_Final/CentOS/kernel-headers-2.6.18-274.el5.x86_64.rpm .
+            cp /Volumes/CentOS_5.7_Final/CentOS/libgomp-4.4.4-13.el5.x86_64.rpm          .
+            cp /Volumes/CentOS_5.7_Final/CentOS/make-3.81-3.el5.x86_64.rpm               .
+
+            rpm -ev gcc cpp libgomp make glibc-devel glibc-headers kernel-devel kernel-headers
+
 
         Local iso for Guest Additions
             open /Applications/VirtualBox.app/Contents/MacOS/VBoxGuestAdditions.iso
