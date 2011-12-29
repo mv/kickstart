@@ -1,0 +1,65 @@
+###
+### Packages
+
+# core: mandatory # {
+SysVinit
+basesystem
+bash
+coreutils
+cpio
+ed
+file
+filesystem
+glibc
+initscripts
+iproute
+iputils
+libgcc
+libtermcap
+passwd
+prelink
+procps
+readline
+redhat-logos
+rootfiles
+rpm
+setup
+shadow-utils
+sysklogd
+termcap
+util-linux
+vim-minimal
+# }
+# core: default   # {
+dhclient
+grub
+openssh-clients
+openssh-server
+sysfsutils
+yum
+# }
+# base: mandatory # {
+bind-utils
+bzip2
+crontabs
+logrotate
+ntsysv
+traceroute
+vixie-cron
+# }
+# base: default   # {
+gnupg
+m2crypto
+sudo
+symlinks
+tcp_wrappers
+time
+tree
+unzip
+wget
+which
+zip
+# }
+
+# vim:ft=cfg:foldlevel=0:
+
