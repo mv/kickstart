@@ -27,7 +27,7 @@ ks57-1.cfg                  - centos57: 156 packages
 ks57-2.cfg                  - centos57: 143 packages
 ks57-3.cfg                  - centos57: 131 packages
 ks57-4.cfg                  - centos57: 127 packages
-ks57-5.cfg                  - centos57: 140 packages (current)
+ks57-5.cfg                  - centos57: 143 packages (current)
 ks61.cfg                    - testing....
 read-comps-xml.rb           - get packages from comps.xml to be used in a new kickstart.
 vagrant-post-additions.cfg  - snippet: post tasks to create 'vagrant' user
