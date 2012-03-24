@@ -1,0 +1,43 @@
+##
+## foo.txt      # Ignore any file named foo.txt.
+## *.html       # Ignore (generated) html files,
+## !foo.html    # except foo.html which is maintained by hand.
+## *.[oa]       # Ignore objects and archives.
+## !lib.a       # but do track lib.a, even though you're ignoring .a files above
+## /TODO        # only ignore the root TODO file, not subdir/TODO
+## build/       # ignore all files in the build/ directory
+## doc/*.txt    # ignore doc/notes.txt, but not doc/server/arch.txt
+##
+
+.svn
+.CVS
+.DS_Store
+.*
+!.gitignore
+
+.vagrant
+*.rpm
+*.deb
+*.gem
+
+*.[oa]
+*.log
+*.tmp
+*.pid
+*swp
+*sw?
+*~
+
+*.tar
+*.[t]gz
+*.[t]bz
+*.[t]bz2
+*.zip
+*.arj
+*.a[0-9][0-9]
+
+afiedt.buf
+sqlnet.log
+*.lst
+
+
