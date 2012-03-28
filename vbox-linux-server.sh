@@ -60,6 +60,7 @@ VBoxManage modifyvm          \
     --usbehci  off           \
     --vrde     off           \
     --teleporter off         \
+    --nictype1          Am79C970A  \
     # --nic2             hostonly  \
     # --hostonlyadapter2 vboxnet0  \
     # --nictype2         82540EM   \
