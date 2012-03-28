@@ -72,7 +72,7 @@ VBoxManage modifyvm          \
 #
 VBoxManage createhd         \
     --filename ${machine_dir}/${machine_name}/${machine_name}.vmdk  \
-    --size   20480          \
+    --size   10240          \
     --format  VMDK          \
     --variant Standard
 
