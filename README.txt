@@ -32,6 +32,6 @@ ks62.cfg                    - link -> current
 ks62-0.cfg                  - centos62: 164 packages (initial)
 ks62-1.cfg                  - centos62: 161 packages (minimal)
 ks62-2.cfg                  - centos62: 243 packages
-ks62-3.cfg                  - centos62: 202 packages (current)
+ks62-3.cfg                  - centos62: 208 packages (current)
 vagrant-post-additions.cfg  - snippet: post tasks to create 'vagrant' user
 
