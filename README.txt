@@ -27,6 +27,11 @@ ks57-3.cfg                  - centos57: 131 packages
 ks57-4.cfg                  - centos57: 125 packages
 ks57-5.cfg                  - centos57: 143 packages
 ks57-6.cfg                  - centos57: 143 packages + pwconv (current)
-ks61.cfg                    - testing....
+ks58.cfg                    - centos58: 152 packages (current)
+ks62.cfg                    - link -> current
+ks62-0.cfg                  - centos62: 164 packages (initial)
+ks62-1.cfg                  - centos62: 161 packages (minimal)
+ks62-2.cfg                  - centos62: 243 packages
+ks62-3.cfg                  - centos62: 202 packages (current)
 vagrant-post-additions.cfg  - snippet: post tasks to create 'vagrant' user
 

@@ -32,10 +32,12 @@ VBoxManage createvm \
 
 #
 # Server settings
+#     CentOS 5.x: 256M  - install/run
+#     CentOS 6.x: 1024M - for install phase
 #
 VBoxManage modifyvm          \
     $machine_name            \
-    --memory 512             \
+    --memory 1024            \
     --vram       5           \
     --acpi       off         \
     --ioapic     on          \
