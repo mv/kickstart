@@ -16,6 +16,9 @@
 
 dvd="/pub/_iso/linux/CentOS-5.7-x86_64-bin-DVD/CentOS-5.7-x86_64-bin-1of8.iso"
 dvd="/pub/iso/centos57/CentOS-5.7-x86_64-bin-DVD-1of2.iso"
+dvd="/pub/iso/centos58/CentOS-5.8-x86_64-bin-DVD-1of2.iso"
+dvd="/pub/iso/centos62/CentOS-6.2-x86_64-bin-DVD1.iso"
+
 machine_dir="/VMachine"
 machine_name="$1"
 
@@ -32,7 +35,7 @@ VBoxManage createvm \
 #
 VBoxManage modifyvm          \
     $machine_name            \
-    --memory 256             \
+    --memory 512             \
     --vram       5           \
     --acpi       off         \
     --ioapic     on          \
@@ -60,7 +63,7 @@ VBoxManage modifyvm          \
     --usbehci  off           \
     --vrde     off           \
     --teleporter off         \
-    --nictype1          Am79C970A  \
+    # --nictype1         Am79C970A \
     # --nic2             hostonly  \
     # --hostonlyadapter2 vboxnet0  \
     # --nictype2         82540EM   \

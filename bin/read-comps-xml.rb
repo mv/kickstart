@@ -1,4 +1,4 @@
-#
+#!/usr/bin/env ruby
 #
 # Reads 'comps.xml' from RedHat/CentOS/Scentific Linux
 #
@@ -17,10 +17,11 @@ group_name = ''
 gr_default = Hash.new
 gr_extra = Hash.new
 
+
 doc['group'].each do |g|
 
   group_name = g['id'].to_s
-  puts "Parsing: " + group_name
+# puts "Parsing: " + group_name
 
   ### First: default groups
   if g['default'].to_s == 'true'
@@ -30,7 +31,10 @@ doc['group'].each do |g|
   ### Second: remaining groups, exclude language packs
   elsif g['langonly'].nil?
 
-    gr_extra[ group_name ] = g['packagelist'][0]['packagereq']
+#   puts "Group: #{group_name}"
+#   puts "Group def" if g['packagelist'][0].empty?
+#   pp g['packagelist']
+    gr_extra[ group_name ] = g['packagelist'][0]['packagereq'] unless g['packagelist'][0].empty?
 
   end
 
@@ -44,7 +48,7 @@ def pkg_split ( group )
     puts "###"
     puts "### Group: " + gr + " ### {"
     puts "###"
-    puts "@" + gr
+    puts "# @" + gr
 
     # split by type
     rpm = Hash.new
@@ -56,16 +60,16 @@ def pkg_split ( group )
     # [ 'mandatory', 'default', 'optional' ].each do |k|
     rpm.keys.sort.each do |k|
 
-      puts "# " + k + "   # {"
+      puts "# " + gr + ": " + k + "   # {"
 
       # show by type
       rpm[ k ].sort.each do |v|
-        puts "  " + v if k == 'mandatory'
-        puts " -" + v if k == 'default'
-        puts " -" + v if k == 'optional'
+        puts       v if k == 'mandatory'
+        puts       v if k == 'default'
+        puts "-" + v if k == 'optional'
       end # v
-      puts "# }\n\n"
 
+      puts "# }\n"
     end # k
 
     puts "### }\n\n"
@@ -75,8 +79,31 @@ def pkg_split ( group )
 end # def
 
 
+puts <<HEADER
+###
+### Packages      # {
+###    default: installed if package is selected
+###    mandatory: always installed
+%packages
+
+HEADER
+
 ### Process default groups packages
 pkg_split( gr_default )
-pkg_split( gr_extra )
 
+### Extra groups
+#pkg_split( gr_extra )
+
+puts <<EXTRA
+###
+### Extra groups
+###
+EXTRA
+gr_extra.keys.sort.each do |gr|
+
+  puts "-@" + gr
+
+end
+
+puts "\n\n"
 
