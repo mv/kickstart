@@ -1906,16 +1906,6 @@
    </packagelist>
   </group>
   <group>
-   <id>server-policy</id>
-   <name>Server Policy</name>
-   <description>Policy packages for the Server variant.</description>
-   <default>true</default>
-   <uservisible>false</uservisible>
-   <packagelist>
-
-   </packagelist>
-  </group>
-  <group>
    <id>storage-client-fcoe</id>
    <name>FCoE Storage Client</name>
    <description>Fiber Channel over Ethernet support</description>
